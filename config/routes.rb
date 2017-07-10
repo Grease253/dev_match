@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   get '/signup_path' => 'pages#signup'
   get '/login_path' => 'pages#login'
   get '/about_path' => 'pages#about'
