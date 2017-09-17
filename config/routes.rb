@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
+  
+  resources :users do
+    resource :profile
+  end
+  
   resources :contacts
   get '/new_contact_path' => 'contacts#new'
   get '/signup_path' => 'pages#signup'
